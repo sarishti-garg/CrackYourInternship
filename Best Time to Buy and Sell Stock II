@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& p) {
+
+        int n = p.size();
+        int curr = p[0];
+        int ans = 0;
+
+        for(int i=1; i<n; i++) {
+            if(p[i] > p[i-1]) ans += p[i]-p[i-1];
+        }
+        
+        return ans;
+    }
+};
