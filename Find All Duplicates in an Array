@@ -1,0 +1,16 @@
+class Solution {
+public:
+    vector<int> findDuplicates(vector<int>& nums) {
+        vector<int>result;
+        unordered_set<int>hashset;
+        for(int num : nums){
+            if(hashset.count(num)>0){
+                result.push_back(num);
+            }
+            else{
+                hashset.insert(num);
+            }
+        }
+        return result;
+    }
+};
